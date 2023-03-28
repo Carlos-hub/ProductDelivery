@@ -25,14 +25,24 @@ export function Login(){
     });
   }
   const data={ email, senha:password}
-  axios.post("",data)
+  axios.post("https://devevolution-production.up.railway.app/client/auth",data)
   .then(response =>{
     console.log(response)
    return response;
   })
   .catch(err =>{
-    console.log(err)
-   return err
+    // console.log(err.response.data);
+
+   return toast.error(err.response.data, {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    });
   })
  }
   return(
