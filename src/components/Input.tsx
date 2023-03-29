@@ -1,11 +1,12 @@
 
 interface IProps{
- value:string;
+ value?:string;
  className:string;
  placeholder:string;
  onchange?:any;
  type:string;
  required:boolean;
+ name?:string;
 }
 export function Input(props:IProps){
  return(
@@ -15,6 +16,7 @@ export function Input(props:IProps){
   placeholder={props.placeholder}
   onChange={props.onchange}
   required={props.required}
+  name={props.name}
   />
  )
 }

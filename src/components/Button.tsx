@@ -5,7 +5,7 @@ interface IProps{
  name:string;
  value:string;
  disabled:boolean;
- onclick:any;
+ onclick?:any;
  classname:string;
 }
 
